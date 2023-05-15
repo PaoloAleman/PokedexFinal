@@ -1,0 +1,197 @@
+*, *:after, *:before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #d34250;
+}
+/*------ HEADER ------*/
+.header-bar{
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    background: #F1F1F1FF;
+}
+
+.search-bar{
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+.search-bar form{
+    display: flex;
+    width: 100%;
+}
+
+.search-bar input{
+    flex-basis: 80%;
+    margin-right: .5rem;
+}
+
+.search-bar button{
+    flex-basis: 20%;
+}
+
+.pokedex table{
+    width: 80% ;
+    margin: 0 auto;
+    border-collapse: collapse;
+    text-align: center;
+    background: #F1F1F1FF;
+    font-family: "Century Gothic";
+
+}
+
+th{
+    background: #FFC107;
+    padding: 15px;
+    font-size: 20px;
+}
+
+td{
+    border: 2px solid #d34250;
+    font-size: 20px;
+}
+a{
+    font-family: "Century Gothic";
+    text-decoration: none;
+    font-size: 20px;
+}
+.ingresar{
+    background-color: deepskyblue;
+    color: #263547;
+    padding: 5px 10px 5px 10px ;
+    border-radius: 5px;
+    ont-size: 20px;
+}
+button, .boton, .volver{
+    background: #FFC107;
+    color: #263547;
+    padding: 5px 10px 5px 10px ;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.nuevo{
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+.TIERRA{
+    background: saddlebrown;
+    color: whitesmoke;
+}
+
+.AGUA{
+    background: darkcyan;
+    color: whitesmoke;
+}
+
+.FUEGO{
+    background: chocolate;
+    color: whitesmoke;
+}
+
+.AIRE{
+    background: lightslategrey;
+    color: whitesmoke;
+}
+
+.modificacion td{
+    font-size: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background:#D1E7DD;
+}
+
+.volver {
+    text-align: center;
+    align-content: center;
+}
+
+.detalle {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+
+/*------ INDEX ------*/
+
+.buscar{
+    background-color: #FFC107;
+}
+
+.buscar:hover{
+    background-color: #d2a007;
+}
+
+.btn-outline-secondary{
+    color: #263547;
+    border-color: #FFC107;
+}
+
+.btn-outline-secondary:hover{
+    border-color: #d2a007;
+}
+
+
+
+ /*------ LOGIN ------*/
+
+
+.bg-login {
+    background-color: rgba(0, 191, 255, 0.85);
+     margin-bottom: 0 !important;
+     border-radius: 5rem;
+ }
+
+.retornarInicio {
+    color: #F1F1F1FF;
+}
+
+.retornarInicio:hover {
+    color: #F1F1F1FF;
+}
+
+.btn-primary {
+    color: #F1F1F1FF;
+    background-color: #56bd47;
+    border-color: #263547;
+}
+
+.btn-primary:hover {
+    color: #F1F1F1FF;
+    background-color: #255b1d;
+    border-color: #263547;
+}
+
+.btn-close {
+    box-shadow: none;
+    margin: 1.5rem;
+}
+
+.tituloPokedex {
+    color: #F1F1F1FF;
+}
+
+.form-control{
+    background-color: #F1F1F1FF !important;
+}
+
+
+/* -------- POKEMON ELIMINADO --------*/
+
+.imagenElimiado {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    max-width: 30%;
+}

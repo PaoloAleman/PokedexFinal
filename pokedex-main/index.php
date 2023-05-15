@@ -1,0 +1,70 @@
+<?php
+
+include_once("consulta_db.php");
+include_once("consulta.php");
+include_once ("permisos.php");
+include_once("header.php");
+include_once("searchbar.php");
+
+
+
+if (isset($_GET["mensaje"])) {
+    $mensaje = $_GET["mensaje"];
+    echo '<br><div class="alert alert-success text-center container pokedex" role="alert">' . $mensaje . '</div><br>';
+}
+
+
+
+?>
+
+<!-- Tabla -->
+<div class="pokedex container">
+    <table>
+        <tr>
+            <th>Imagen</th>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Tipo</th>
+            <th>Descripción</th>
+            <?= $habilitado ? "<th>ABM</th>" : "" ?>
+        </tr>
+
+        <?php
+        foreach ($data["pokemones"] as $pokemon) {
+            echo <<<DATA
+                <tr>
+                    <td>
+                        <a href="detalle_pokemon.php?pokemonId=$pokemon[uid]"></a>
+                        <img src="{$pokemon["url_img"]}" width="100" height="100"/>
+                    </td>
+                    <td>$pokemon[uid]</td>
+                    <td>$pokemon[name]</td>
+                    <td>
+                        <img title="{$pokemon["typeDescription"]}" src="img/{$pokemon["typeDescription"]}.png" width="50" height="50"/>
+                    </td>
+                    <td>$pokemon[description]</td>
+            DATA;
+            if ($habilitado) {
+                echo <<<ABM
+                    <td>
+                        <a class="boton" href="formEliminar.php?pokemonId={$pokemon["uid"]}">Eliminar</a>
+                    
+                        <a class="boton" href="formEditar.php?pokemonId={$pokemon["uid"]}">Editar</a>
+                    </td>
+                </tr>
+                ABM;
+            } else {
+                echo "</tr>";
+            }
+        }
+        ?>
+    </table>
+</div>
+
+<?php
+include_once("newPokemon.php");
+include_once("scriptsBootstrap.php");
+?>
+
+</body>
+</html>
